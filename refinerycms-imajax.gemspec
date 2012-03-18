@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-imajax'
-  s.version           = '2.0.beta1'
+  s.version           = '2.0.0.beta1'
   s.description       = 'Replacing default bulk image uploading with an Ajaxy, one by one, upload method to prevent timeouts'
   s.authors           = ["Jean-Philippe Boily | @jipiboily"]
   s.email             = ["j@jipi.ca"]
