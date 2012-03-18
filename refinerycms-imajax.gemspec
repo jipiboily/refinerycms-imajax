@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.description       = 'Replacing default bulk image uploading with an Ajaxy, one by one, upload method to prevent timeouts'
   s.authors           = ["Jean-Philippe Boily | @jipiboily"]
   s.email             = ["j@jipi.ca"]
+  s.homepage          = 'http://github.com/jipiboily/refinerycms-imajax'
   s.date              = '2012-03-18'
   s.summary           = 'Ajax image uploading for Refinery CMS'
   s.require_paths     = %w(lib)
