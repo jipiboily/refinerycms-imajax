@@ -11,7 +11,7 @@ You are expected to have a Rails project with Refinery 2 (>= 2.0.0 but only test
 ---
 Add refinerycms-imajax to your `Gemfile`:
 
-	gem 'refinerycms-imajax', "~> 2.0.0.beta2"
+	gem 'refinerycms-imajax'
 	
 run
 
