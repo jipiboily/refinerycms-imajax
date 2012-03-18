@@ -12,3 +12,9 @@ rvm:
 env:
   - DB=mysql DB_USERNAME=root
   - DB=postgresql DB_USERNAME=postgres
+gemfile:
+  - gemfiles/refinery-2.0.0
+  - gemfiles/refinery-2.0.1
+  - gemfiles/refinery-2.0.2
+  - gemfiles/refinery-2-0-stable-branch
+  - gemfiles/refinery-edge

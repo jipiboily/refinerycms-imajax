@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gemspec
+gemspec :path=>"../"
 
 gem 'refinerycms', :git => "git://github.com/resolve/refinerycms.git"
 
@@ -68,4 +68,4 @@ group :development, :test do
   end
 end
 
-gemspec :path=>"../"
+

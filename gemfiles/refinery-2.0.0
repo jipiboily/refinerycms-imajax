@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gemspec
+gemspec :path=>"../"
 
 gem 'refinerycms', '~> 2.0.0'
 
@@ -67,5 +67,3 @@ group :development, :test do
     end
   end
 end
-
-gemspec :path=>"../"
