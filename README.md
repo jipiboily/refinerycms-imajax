@@ -27,11 +27,23 @@ It should now work!
  - Manage locales and remove hard coded ones
  - Add a progress bar for each file maybe?
  - Setup TravisCI to test over multiple Ruby, Rails and Refinery versions
+ - Fix Capybara so that it can test multiple file uploads
  
 
 ## Tests
 ---
 There is only one request spec actually which is a copy of the refinerycms-images gem. Why? It is not currently possible to test multiple file uploads with Capybara: [https://github.com/jnicklas/capybara/issues/37](https://github.com/jnicklas/capybara/issues/37).
+
+### Run tests
+
+ 1. You need a dummy app first:
+	
+		$ bundle exec rake refinery:testing:dummy_app
+		
+ 2. Run tests:
+
+ 		$ bundle exec rake
+
 
 
 ### How to build this extension as a gem
