@@ -6,6 +6,10 @@ $(document).ready ->
       images.upload_all()
   $("#image_image").change (e) ->
     images.file_list  = e.target.files
+  parent.$(".ui-icon-closethick").click (e) ->
+    e.preventDefault()
+    parent.window.location.href = parent.window.location.href
+
 
 class Images
   # TODO:

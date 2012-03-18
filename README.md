@@ -23,7 +23,6 @@ It should now work!
 
 ## TODO
 ---
- 1. Refresh images index after closing the dialog box! 
  - Set valid file types based on image model validation (images.js.coffee.erb)
  - Manage locales and remove hard coded ones
  - Add a progress bar for each file maybe?
