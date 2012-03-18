@@ -70,7 +70,7 @@ class Images
     form = new FormData();
     form.append "image", file
     form.append "authenticity_token", @authenticity_token
-    _this = @
+    _this = @ # save current scope so we can use current object methods within $.ajax
     $.ajax
       type: 'POST'
       url: @form_action
