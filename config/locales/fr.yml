@@ -1,0 +1,21 @@
+fr:
+  refinery:
+    imajax:
+      uploading:
+        "Transfert en cours..."
+      there_was:
+        "Il y a"
+      error:
+        "erreur"
+      should_be_smaller:
+        "devrait être plus petit que"
+      bytes_in_size:
+        "octets"
+      image_type:
+        "devrait être un fichier JPG, PNG ou GIF"
+      uploaded:
+        "transféré"
+      last_complete:
+        "Dernier transfert complété"
+      uploaded_successfully:
+        "Transféré avec succès"

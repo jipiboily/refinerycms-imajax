@@ -1,0 +1,21 @@
+en:
+  refinery:
+    imajax:
+      uploading:
+        "Uploading..."
+      there_was:
+        "There was"
+      error:
+        "error"
+      should_be_smaller:
+        "should be smaller than"
+      bytes_in_size:
+        "bytes in size"
+      image_type:
+        "should be either a JPG, PNG or GIF"
+      uploaded:
+        "uploaded"
+      last_complete:
+        "Last upload complete"
+      uploaded_successfully:
+        "Uploaded successfully"
