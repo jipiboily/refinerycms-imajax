@@ -15,20 +15,20 @@ class Images
     @authenticity_token = $("meta[name=\"csrf-token\"]").attr("content")
     @form_action = "/refinery/images/ajax_create"
     @cache_dom()
-    
+
   cache_dom: ->
     @error_list = $("#error_list")
     @success_list = $("#flash")
     @error_explanation = $("#errorExplanation")
     @upload_progress = $("#upload_progress")
-  
+
   before_upload_all: ->
     @files = []
     @errors = []
     @total_files = @file_list.length
     @uploaded = 0
     @error_explanation.hide()
-  
+
   upload_all: ->
     @before_upload_all()
     for file in @file_list
@@ -39,7 +39,7 @@ class Images
     $(".field").hide()
     @progress "Uploading..."
     @upload_next()
-  
+
   after_upload_all: ->
     $(".save-loader").hide()
     @upload_progress.hide()
@@ -49,7 +49,8 @@ class Images
      else
       @success_list.show()
       setTimeout (->
-        parent.window.document.getElementById('dialog_iframe').contentDocument.location.reload(true)
+        parent.window.document.getElementById('dialog_iframe').contentDocument.location.reload(true) if $('#dialog_menu_left').length == 1
+        window.parent.document.location.reload() if $('#dialog_menu_left').length == 0
       ), 3000
 
   validate: (file) ->
@@ -65,7 +66,7 @@ class Images
     @do_upload(@files[0]) unless @files.length == 0
     if @total_files > 0 && @files.length == 0
       @after_upload_all()
-  
+
   do_upload: (file) =>
     form = new FormData();
     form.append "image", file
@@ -81,7 +82,7 @@ class Images
         _this.post_success(file)
       error: (data) ->
         _this.post_error(file, data.responseText)
-  
+
   after_do_upload: (file) ->
     @files.remove file
     @upload_next()
@@ -91,7 +92,7 @@ class Images
     @success_list.append("#{file.name} <br />")
     @update_progress file
     @after_do_upload file
-  
+
   post_error: (file, errors) ->
     errors = JSON.parse(errors).image
     @update_progress file, errors
@@ -106,11 +107,11 @@ class Images
       @error_list.append("<li>#{error}</li>")
     @error_explanation.show()
 
-  update_progress: (file, error = null) -> 
+  update_progress: (file, error = null) ->
     @uploaded++
     message = error || "Last upload complete: #{file.name}"
     @progress "#{@uploaded}/#{@total_files} uploaded | #{message}"
-  
+
   progress: (text) ->
     @upload_progress.html(text);
 
