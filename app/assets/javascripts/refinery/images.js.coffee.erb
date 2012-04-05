@@ -46,10 +46,11 @@ class Images
     if @errors.length > 0
       @progress "There was #{@errors.length} error#{(if @errors.length > 1 then "s" else "")}"
       @render_errors()
+     else
       @success_list.show()
-    else
-      # This gross snippet reloads the lightbox.
-      parent.window.document.getElementById('dialog_iframe').contentDocument.location.reload(true)
+      setTimeout (->
+        window.parent.document.location.reload()
+      ), 3000
 
   validate: (file) ->
     max_file_size = <%= Refinery::Images.max_image_size %>
