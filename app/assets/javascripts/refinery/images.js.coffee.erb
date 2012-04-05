@@ -49,7 +49,7 @@ class Images
      else
       @success_list.show()
       setTimeout (->
-        window.parent.document.location.reload()
+        parent.window.document.getElementById('dialog_iframe').contentDocument.location.reload(true)
       ), 3000
 
   validate: (file) ->
